@@ -1,4 +1,6 @@
-<app-student-form (studentAdded)="onStudentAdded()"></app-student-form>
-<app-student-list [students]="students"></app-student-list>
+<div class="container pt-5">
+    <app-student-form (studentAdded)="onStudentAdded()"></app-student-form>
+    <app-student-list [students]="students"></app-student-list>
+</div>
 
 <router-outlet></router-outlet>

@@ -1,35 +1,38 @@
-<h2> Listar Alunos e Notas</h2>
+<h2 class="text-center"> Listar Alunos e Notas</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>Nome do Aluno</th>
-            <th>Matéria</th>
-            <th>Conceito</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let student of students">
-            <td rowspan="{{ student.subjectGrades.length }}">{{ student.studentName }}</td>
-            <td>
-                <table>
-                    <tbody>
-                        <tr *ngFor="let grade of student.subjectGrades">
-                            <td>{{ grade.subjectName }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-                <table>
-                    <tbody>
-                        <tr *ngFor="let grade of student.subjectGrades">
-                            <td>{{ grade.subjectGrade }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
+<div class="container my-5">
 
-    </tbody>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Aluno</th>
+                <th>Matéria</th>
+                <th>Conceito</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td rowspan="{{ student.subjectGrades.length }}">{{ student.studentName }}</td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr *ngFor="let grade of student.subjectGrades">
+                                <td>{{ grade.subjectName }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr *ngFor="let grade of student.subjectGrades">
+                                <td>{{ grade.subjectGrade }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
