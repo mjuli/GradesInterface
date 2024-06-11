@@ -1,27 +1,46 @@
-<h2 class="text-center"> Cadastrar Alunos e Notas</h2>
-
 <div class="container my-5">
-    <form [formGroup]="studentForm" (submit)="onSubmit()">
-        <div>
-            <label for="studentName">Nome do Aluno:</label>
-            <input type="text" id="studentName" formControlName="studentName" class="form-control">
+    <div class="p-4 bg-secondary text-white rounded">
+
+        <h2 class="text-center">Cadastrar Notas</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-5 m-4">
+                <form [formGroup]="studentForm" (submit)="onSubmit()">
+                    <div class="mx-1">
+                        <div class="mb-3 row">
+                            <label for="studentName" class="col-3 col-form-label">Aluno:</label>
+                            <div class="col-8">
+                                <input type="text" id="studentName" formControlName="studentName" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="subjectName" class="col-3 col-form-label"> Matéria:</label>
+                            <div class="col-8">
+                                <input type="text" id="subjectName" formControlName="subjectName" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="grade1" class="col-3 col-form-label">Nota 01:</label>
+                            <div class="col-8">
+                                <input type="number" id="grade1" formControlName="grade1" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="grade2" class="col-3 col-form-label">Nota 02:</label>
+                            <div class="col-8">
+                                <input type="number" id="grade2" formControlName="grade2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="grade3" class="col-3 col-form-label">Nota 03:</label>
+                            <div class="col-8">
+                                <input type="number" id="grade3" formControlName="grade3" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-light col-11">Salvar</button>
+                </form>
+            </div>
         </div>
-        <div>
-            <label for="subjectName">Nome da Matéria:</label>
-            <input type="text" id="subjectName" formControlName="subjectName">
-        </div>
-        <div>
-            <label for="grade1">Nota 01:</label>
-            <input type="number" id="grade1" formControlName="grade1">
-        </div>
-        <div>
-            <label for="grade2">Nota 02:</label>
-            <input type="number" id="grade2" formControlName="grade2">
-        </div>
-        <div>
-            <label for="grade3">Nota 03:</label>
-            <input type="number" id="grade3" formControlName="grade3">
-        </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
-    </form>
+    </div>
 </div>
